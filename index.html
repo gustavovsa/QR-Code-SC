@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex" />
+    <meta name="referrer" content="no-referrer" />
+    <title>Saint Cat Redirect</title>
+    <script>
+      const redirects = {
+        tsf: "https://saintcat.vercel.app/book/tsf",
+        tm: "https://saintcat.vercel.app/book/tm",
+      };
+
+      // Extrai a última parte da URL (ex: "tsf")
+      const path = window.location.pathname
+        .replace("/QR-Code-SC/", "") // nome do repositório aqui!
+        .replace("/", "")
+        .trim();
+
+      if (redirects[path]) {
+        window.location.href = redirects[path];
+      } else {
+        document.write("Link não encontrado");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
